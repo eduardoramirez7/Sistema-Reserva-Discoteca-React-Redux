@@ -1,0 +1,31 @@
+#card {
+    color:white;
+    background-color:darkslategray;
+    margin-left: 4px;
+    margin-right: 6px;
+}
+
+#container-ppal {
+    margin-top: 2px;
+}
+  
+.jb{
+    height: 500px!important;
+    overflow: auto;
+}
+
+.img {
+    height: 250px;
+    width: 250px;
+    object-fit:fill;
+}
+
+#jumbotron-genero {
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+#color{
+    color:red;
+}

@@ -49,12 +49,12 @@ export default class Signup extends Component {
         return (
             <div>
                 <NavBar />
-                <div class="jumbotron" className="container center">
-                    <Jumbotron>
+                <div>
+                    <Jumbotron className="jumbotron">
                         <Form onSubmit={this.handleSubmit}>
                             <div className="form-group-color">
                                 <Form.Group>
-                                    <h1>Registrate en<Link to="/"> reservAPP</Link>
+                                    <h1>Registrate en<Link to="/"> reservAPP <img src="/images/logo.png" width="70"/></Link>
                                     </h1>
                                     <p>Ingresa tus datos para crear tu cuenta.</p>
                                 </Form.Group>

@@ -1,7 +1,7 @@
 .jumbotron {
     margin-top: 20px;
-    margin-right: 150px;
-    margin-left: 150px;
+    margin-right: 0px;
+    margin-left: 0px;
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -12,7 +12,7 @@
 }
 
 #form-input{
-    margin-left: 150px;
+    margin-left: 215px;
 }
 
 .form-group-color{

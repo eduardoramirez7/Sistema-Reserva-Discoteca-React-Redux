@@ -9,6 +9,7 @@ import Generos from './components/Generos';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Component } from 'react';
 import { auth } from './services/firebase';
+import Discoteca from './components/Discoteca';
 
 
 function PrivateRoute({ component: Component, authenticated, ...rest }) {
@@ -66,7 +67,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home}></Route>
             <PrivateRoute path="/generos" authenticated={this.state.authenticated} component={Generos}></PrivateRoute>
-            <PublicRoute path="/about" component={About}></PublicRoute>
+            <PrivateRoute path="/discoteca" authenticated={this.state.authenticated} component={Discoteca}></PrivateRoute>
+            <Route path="/about" authenticated={this.state.authenticated} component={About}></Route>
             <PublicRoute path="/signup" authenticated={this.state.authenticated} component={Signup}></PublicRoute>
             <PublicRoute path="/login" authenticated={this.state.authenticated} component={Login}></PublicRoute>
             <Route path="/404" component={NotFoundPage} />

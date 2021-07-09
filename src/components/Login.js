@@ -39,14 +39,14 @@ export default class Login extends Component {
         return (
             <div>
                 <NavBar />
-                <div class="jumbotron" className="container center">
-                    <Jumbotron>
+                <div>
+                    <Jumbotron className="jumbotron">
                         <Form autoComplete="off" onSubmit={this.handleSubmit}>
                             <div className="form-group-login">
 
                                 <Form.Group className="form-group-color">
                                     <row>
-                                        <h1>Inicio de Sesión en <Link to="/">reservAPP</Link>
+                                        <h1>Inicio de Sesión en <Link to="/">reservAPP <img src="/images/logo.png" width="70"/></Link>
                                         </h1>
                                         <p>Ingresa los datos de tu cuenta registrada.</p>
                                     </row>
