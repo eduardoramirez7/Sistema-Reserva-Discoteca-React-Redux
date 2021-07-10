@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Component } from 'react';
 import { auth } from './services/firebase';
 import Discoteca from './components/Discoteca';
+import Reserva from './components/Reserva';
 
 
 function PrivateRoute({ component: Component, authenticated, ...rest }) {
@@ -68,6 +69,7 @@ class App extends Component {
             <Route exact path="/" component={Home}></Route>
             <PrivateRoute path="/generos" authenticated={this.state.authenticated} component={Generos}></PrivateRoute>
             <PrivateRoute path="/discoteca" authenticated={this.state.authenticated} component={Discoteca}></PrivateRoute>
+            <PrivateRoute path="/reserva" authenticated={this.state.authenticated} component={Reserva}></PrivateRoute>
             <Route path="/about" authenticated={this.state.authenticated} component={About}></Route>
             <PublicRoute path="/signup" authenticated={this.state.authenticated} component={Signup}></PublicRoute>
             <PublicRoute path="/login" authenticated={this.state.authenticated} component={Login}></PublicRoute>

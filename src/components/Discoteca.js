@@ -4,6 +4,7 @@ import NavBar from './nav/NavBar'
 import { auth } from '../services/firebase'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import {elegir_discoteca_action} from '../actions/elegirDiscotecaAction'
 
 
 class Discoteca extends Component {
@@ -25,8 +26,9 @@ class Discoteca extends Component {
                                         Ubicado en la calle24 # 9-85 - Horario de atencion: Miercoles a domingo
                                         de 7 a 2 AM. Parqueadero Gratuito.
                                     </Card.Text>
-                                    <Button variant="outline-secondary"><Link to="/discoteca" id="color"
-                                    >ENTRAR</Link></Button>
+                                    <Button variant="outline-secondary"><Link to="/reserva" id="color" onClick={()=> {
+                                                this.props.elegir_discoteca_action(1);
+                                            }}>ENTRAR</Link></Button>
                                     
                                 </Card.Body>
                             </Card>
@@ -38,8 +40,9 @@ class Discoteca extends Component {
                                         Ubicado en la calle24 # 9-85 - Horario de atencion: Miercoles a domingo
                                         de 7 a 2 AM. Parqueadero Gratuito.
                                     </Card.Text>
-                                    <Button variant="outline-secondary"><Link to="/discoteca" id="color"
-                                    >ENTRAR</Link></Button>
+                                    <Button variant="outline-secondary"><Link to="/reserva" id="color" onClick={()=> {
+                                                this.props.elegir_discoteca_action(1);
+                                            }}>ENTRAR</Link></Button>
                                 </Card.Body>
                             </Card>
                             <Card id="card">
@@ -50,8 +53,9 @@ class Discoteca extends Component {
                                         Ubicado en la calle24 # 9-85 - Horario de atencion: Miercoles a domingo
                                         de 7 a 2 AM. Parqueadero Gratuito.
                                     </Card.Text>
-                                    <Button variant="outline-secondary"><Link to="/discoteca" id="color"
-                                    >ENTRAR</Link></Button>
+                                    <Button variant="outline-secondary"><Link to="/reserva" id="color" onClick={()=> {
+                                                this.props.elegir_discoteca_action(1);
+                                            }}>ENTRAR</Link></Button>
                                 </Card.Body>
                             </Card>
                         </CardGroup>
@@ -71,7 +75,7 @@ class Discoteca extends Component {
                                         Ubicado en la calle24 # 9-85 - Horario de atencion: Miercoles a domingo
                                         de 7 a 2 AM. Parqueadero Gratuito.
                                     </Card.Text>
-                                    <Button variant="outline-secondary"><Link to="/discoteca" id="color"
+                                    <Button variant="outline-secondary"><Link to="/reserva" id="color"
                                     >ENTRAR</Link></Button>
                                     
                                 </Card.Body>
@@ -84,7 +88,7 @@ class Discoteca extends Component {
                                         Ubicado en la calle24 # 9-85 - Horario de atencion: Miercoles a domingo
                                         de 7 a 2 AM. Parqueadero Gratuito.
                                     </Card.Text>
-                                    <Button variant="outline-secondary"><Link to="/discoteca" id="color"
+                                    <Button variant="outline-secondary"><Link to="/reserva" id="color"
                                     >ENTRAR</Link></Button>
                                 </Card.Body>
                             </Card>
@@ -96,7 +100,7 @@ class Discoteca extends Component {
                                         Ubicado en la calle24 # 9-85 - Horario de atencion: Miercoles a domingo
                                         de 7 a 2 AM. Parqueadero Gratuito.
                                     </Card.Text>
-                                    <Button variant="outline-secondary"><Link to="/discoteca" id="color"
+                                    <Button variant="outline-secondary"><Link to="/reserva" id="color"
                                     >ENTRAR</Link></Button>
                                 </Card.Body>
                             </Card>
@@ -122,10 +126,14 @@ class Discoteca extends Component {
 
 }
 
+const mapDispatchToProps = {
+    elegir_discoteca_action
+}
+
 const mapStoretoProps = (state) => {
     return {
         elegir_genero: state.elegir_genero
     }
 }
 
-export default connect(mapStoretoProps)(Discoteca);
+export default connect(mapStoretoProps, mapDispatchToProps)(Discoteca);
