@@ -41,7 +41,6 @@ class Generos extends Component {
                                             <Link to="/discoteca" id="color" onClick={()=> {
                                                 this.props.elegir_genero_musical_action(1);
                                             }}>Ver mas...</Link>
-                                            <h6>{this.state.idGenero}</h6>
                                         </Card.Body>
                                     </Card>
                                     <Card id="card">
@@ -55,7 +54,6 @@ class Generos extends Component {
                                             <Link to="/discoteca" id="color" onClick={()=> {
                                                 this.props.elegir_genero_musical_action(2);
                                             }}>Ver mas...</Link>
-                                            <h6>{this.state.idGenero}</h6>
                                         </Card.Body>
                                     </Card>
                                     <Card id="card">
@@ -66,7 +64,9 @@ class Generos extends Component {
                                                 Contenido musical que te hace vibrar y sentir ganas de nunca parar,
                                                  siente recorre la música eléctronica por tus venas.
                                             </Card.Text>
-                                            <Link id="color" to="/discoteca" onClick={()=> this.setState({idGenero: 3})}>Ver mas...</Link>
+                                            <Link to="/discoteca" id="color" onClick={()=> {
+                                                this.props.elegir_genero_musical_action(3);
+                                            }}>Ver mas...</Link>
                                         </Card.Body>
                                     </Card>
                                     <Card id="card">
@@ -77,7 +77,9 @@ class Generos extends Component {
                                                 Lo mejor de la música urbana la puedes encontrar en las mas populares, 
                                                 discotecas de la ciudad, ven y conocelas.
                                             </Card.Text>
-                                            <Link id="color" to="/discoteca" onClick={()=> this.setState({idGenero: 4})}>Ver mas...</Link>
+                                            <Link to="/discoteca" id="color" onClick={()=> {
+                                                this.props.elegir_genero_musical_action(4);
+                                            }}>Ver mas...</Link>
                                         </Card.Body>
                                     </Card>
                                 </CardGroup>
@@ -92,7 +94,9 @@ class Generos extends Component {
                                                 No puedes dejar de disfrutar de este ritmo musical que esta causando 
                                                 sensacion en el mundo, conoce y disfruta ahora.
                                             </Card.Text>
-                                            <Link id="color" to="/discoteca" onClick={()=> this.setState({idGenero: 5})}>Ver mas...</Link>
+                                            <Link to="/discoteca" id="color" onClick={()=> {
+                                                this.props.elegir_genero_musical_action(5);
+                                            }}>Ver mas...</Link>
                                         </Card.Body>
                                     </Card>
                                     <Card id="card">
@@ -103,7 +107,9 @@ class Generos extends Component {
                                                 Disfruta de música tranquila, recargate de la mejor energia y descubre 
                                                 que más que los instrrumentos es lo que expresa del Jazz.
                                             </Card.Text>
-                                            <Link id="color" to="/discoteca" onClick={()=> this.setState({idGenero: 6})}>Ver mas...</Link>
+                                            <Link to="/discoteca" id="color" onClick={()=> {
+                                                this.props.elegir_genero_musical_action(6);
+                                            }}>Ver mas...</Link>
                                         </Card.Body>
                                     </Card>
                                     <Card id="card">
@@ -114,7 +120,9 @@ class Generos extends Component {
                                                 Eres una persona romantica, que disfruta viviendo el amor día a día, 
                                                 este lugar es para ti, disfruta que aun hay mas amor que descubrir.
                                             </Card.Text>
-                                            <Link id="color" to="/discoteca" onClick={()=> this.setState({idGenero: 7})}>Ver mas...</Link>
+                                            <Link to="/discoteca" id="color" onClick={()=> {
+                                                this.props.elegir_genero_musical_action(7);
+                                            }}>Ver mas...</Link>
                                         </Card.Body>
                                     </Card>
                                     <Card id="card">
@@ -125,7 +133,9 @@ class Generos extends Component {
                                                 ¿Enamorado o Despechado? Este es tu lugar, la música popular no te puede 
                                                 faltar, ven y gozatela con un buen guarito.
                                             </Card.Text>
-                                            <Link id="color" to="/discoteca" onClick={()=> this.setState({idGenero: 8})}>Ver mas...</Link>
+                                            <Link to="/discoteca" id="color" onClick={()=> {
+                                                this.props.elegir_genero_musical_action(8);
+                                            }}>Ver mas...</Link>
                                         </Card.Body>
                                     </Card>
                                 </CardGroup>

@@ -84,9 +84,6 @@ export default class Signup extends Component {
                                     <Button className="mr-3" variant="light" onClick={this.googleSignIn} type="button">
                                         Registrate con Google
                                     </Button>
-                                    <Button variant="light">
-                                        Registrate con GitHub
-                                    </Button>
                                 </row>
                             </div>
                             <br />

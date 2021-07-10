@@ -6,3 +6,15 @@
     float: left; 
     width: 250px; 
 }
+
+.card {
+    color:black;
+}
+
+#jumb {
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+    max-width: 1200px;
+    max-height: 500px;
+}

@@ -3,6 +3,7 @@
     background-color:darkslategray;
     margin-left: 4px;
     margin-right: 6px;
+    align-items: flex-end;
 }
 
 #container-ppal {
@@ -17,7 +18,7 @@
 .img {
     height: 250px;
     width: 250px;
-    object-fit:fill;
+    object-fit:cover;
 }
 
 #jumbotron-genero {
