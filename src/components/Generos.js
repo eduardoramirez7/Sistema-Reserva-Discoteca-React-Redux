@@ -4,17 +4,18 @@ import { Card, CardGroup, Jumbotron, ListGroup } from 'react-bootstrap'
 import NavBar from './nav/NavBar'
 import '../styles/genero.css'
 import { Link } from 'react-router-dom'
-import { useHistory } from 'react-router-dom';
 import { auth } from '../services/firebase'
+import {connect} from 'react-redux'
+import {elegir_genero_musical_action} from '../actions/elegirGeneroAction'
 
 
-export default class Generos extends Component {
+
+class Generos extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            user: auth().currentUser,
-            idGenero: 0
+            user: auth().currentUser
         };
     }
 
@@ -37,7 +38,9 @@ export default class Generos extends Component {
                                                 Entra y experimenta el increible ritmo musical de la salsa, disfruta
                                                 de orquestas en vivo, cada dia se respirar salsa.
                                             </Card.Text>
-                                            <Link to="/generos" id="color" onClick={()=> this.setState({idGenero: 1})}>Ver mas...</Link>
+                                            <Link to="/discoteca" id="color" onClick={()=> {
+                                                this.props.elegir_genero_musical_action(1);
+                                            }}>Ver mas...</Link>
                                             <h6>{this.state.idGenero}</h6>
                                         </Card.Body>
                                     </Card>
@@ -49,7 +52,9 @@ export default class Generos extends Component {
                                                 Entra para que disfrutes de los mejores lugares de Rock, bandas
                                                 en vivo y muchas sorpresas más. Entra ahora mismo!
                                             </Card.Text>
-                                            <Link to="/generos" id="color" onClick={()=> this.setState({idGenero: 2})}>Ver mas...</Link>
+                                            <Link to="/discoteca" id="color" onClick={()=> {
+                                                this.props.elegir_genero_musical_action(2);
+                                            }}>Ver mas...</Link>
                                             <h6>{this.state.idGenero}</h6>
                                         </Card.Body>
                                     </Card>
@@ -61,7 +66,7 @@ export default class Generos extends Component {
                                                 Contenido musical que te hace vibrar y sentir ganas de nunca parar,
                                                  siente recorre la música eléctronica por tus venas.
                                             </Card.Text>
-                                            <Link id="color" to="/generos" onClick={()=> this.setState({idGenero: 3})}>Ver mas...</Link>
+                                            <Link id="color" to="/discoteca" onClick={()=> this.setState({idGenero: 3})}>Ver mas...</Link>
                                         </Card.Body>
                                     </Card>
                                     <Card id="card">
@@ -72,7 +77,7 @@ export default class Generos extends Component {
                                                 Lo mejor de la música urbana la puedes encontrar en las mas populares, 
                                                 discotecas de la ciudad, ven y conocelas.
                                             </Card.Text>
-                                            <Link id="color" to="/generos" onClick={()=> this.setState({idGenero: 4})}>Ver mas...</Link>
+                                            <Link id="color" to="/discoteca" onClick={()=> this.setState({idGenero: 4})}>Ver mas...</Link>
                                         </Card.Body>
                                     </Card>
                                 </CardGroup>
@@ -87,7 +92,7 @@ export default class Generos extends Component {
                                                 No puedes dejar de disfrutar de este ritmo musical que esta causando 
                                                 sensacion en el mundo, conoce y disfruta ahora.
                                             </Card.Text>
-                                            <Link id="color" to="/generos" onClick={()=> this.setState({idGenero: 5})}>Ver mas...</Link>
+                                            <Link id="color" to="/discoteca" onClick={()=> this.setState({idGenero: 5})}>Ver mas...</Link>
                                         </Card.Body>
                                     </Card>
                                     <Card id="card">
@@ -98,7 +103,7 @@ export default class Generos extends Component {
                                                 Disfruta de música tranquila, recargate de la mejor energia y descubre 
                                                 que más que los instrrumentos es lo que expresa del Jazz.
                                             </Card.Text>
-                                            <Link id="color" to="/generos" onClick={()=> this.setState({idGenero: 6})}>Ver mas...</Link>
+                                            <Link id="color" to="/discoteca" onClick={()=> this.setState({idGenero: 6})}>Ver mas...</Link>
                                         </Card.Body>
                                     </Card>
                                     <Card id="card">
@@ -109,7 +114,7 @@ export default class Generos extends Component {
                                                 Eres una persona romantica, que disfruta viviendo el amor día a día, 
                                                 este lugar es para ti, disfruta que aun hay mas amor que descubrir.
                                             </Card.Text>
-                                            <Link id="color" to="/generos" onClick={()=> this.setState({idGenero: 7})}>Ver mas...</Link>
+                                            <Link id="color" to="/discoteca" onClick={()=> this.setState({idGenero: 7})}>Ver mas...</Link>
                                         </Card.Body>
                                     </Card>
                                     <Card id="card">
@@ -120,7 +125,7 @@ export default class Generos extends Component {
                                                 ¿Enamorado o Despechado? Este es tu lugar, la música popular no te puede 
                                                 faltar, ven y gozatela con un buen guarito.
                                             </Card.Text>
-                                            <Link id="color" to="/generos" onClick={()=> this.setState({idGenero: 8})}>Ver mas...</Link>
+                                            <Link id="color" to="/discoteca" onClick={()=> this.setState({idGenero: 8})}>Ver mas...</Link>
                                         </Card.Body>
                                     </Card>
                                 </CardGroup>
@@ -133,3 +138,9 @@ export default class Generos extends Component {
     }
 
 }
+
+const mapDispatchToProps = {
+    elegir_genero_musical_action
+}
+
+export default connect(null, mapDispatchToProps)(Generos);
